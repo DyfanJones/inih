@@ -1,0 +1,77 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# inih
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+A simple wrapper of the [`inih`](https://github.com/benhoyt/inih) C library for reading and writing INI files in R.
+
+## Installation
+
+You can install the development version of inih like so:
+
+``` r
+remotes::install_github("dyfanjones/inih")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+``` {r, read_ini}
+library(inih)
+
+demo_ini <- system.file("demo.ini", package = "inih")
+read_ini(demo_ini)
+```
+
+
+``` {r, write_ini}
+library(inih)
+
+temp_file <- tempfile(fileext = ".ini")
+# Create an example configuration list
+config <- list(
+  person = list(name = "John Doe", age = "30", city = "New York"),
+  job = list(title = "Engineer", company = "ExampleCorp")
+)
+
+# Write the configuration to an INI file
+write_ini(config, temp_file)
+
+# Check the content of the created INI file
+cat(readLines(temp_file), sep = "\n")
+
+# clean up
+unlink(temp_file)
+```
+
+## Benchmark:
+
+```{r, benchmark} 
+demo_ini <- system.file("demo.ini", package = "inih")
+(bm <- bench::mark(
+ inih::read_ini(demo_ini),
+ ini::read.ini(demo_ini),
+ relative = TRUE
+))
+
+ggplot2::autoplot(bm)
+```
+
+## Acknowledgements
+
+This project uses the [`inih`](https://github.com/benhoyt/inih) library by Ben Hoyt, which is licensed under the BSD-3-Clause license. You can find the license text in the `inst/LICENSE-inih.txt` file.
+

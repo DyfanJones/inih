@@ -1,0 +1,26 @@
+Package: inih
+Type: Package
+Title: Fast Ini File Parser for R
+Version: 1.0
+Date: 2024-12-31
+Authors@R: c(
+  person("Dyfan", "Jones", email="dyfan.r.jones@gmail.com", role= c("aut", "cre")),
+  person("Ben", "Hoyt", role = c("aut", "cph"), comment="Author of bundled inih"))
+Description: Provide a simple 'ini' file parser to structured list format.
+  Using the 'C' library 'inih' <https://github.com/benhoyt/inih> as
+  backend of fast performance.
+License: MIT + file LICENSE
+URL: https://github.com/DyfanJones/inih
+BugReports: https://github.com/DyfanJones/inih/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Encoding: UTF-8
+LinkingTo: Rcpp
+Imports: Rcpp (>= 1.0.11)
+Suggests:
+  knitr,
+  testthat (>= 3.0.0)
+Collate:
+  'RcppExports.R'
+Config/testthat/edition: 3
+
