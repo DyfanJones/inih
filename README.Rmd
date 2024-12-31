@@ -14,6 +14,7 @@ knitr::opts_chunk$set(
 # inih
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/inih)](https://CRAN.R-project.org/package=inih)
 <!-- badges: end -->
 
 A simple wrapper of the [`inih`](https://github.com/benhoyt/inih) C library for reading and writing INI files in R.
