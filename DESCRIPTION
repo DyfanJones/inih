@@ -1,7 +1,7 @@
 Package: inih
 Type: Package
 Title: Fast Ini File Parser for R
-Version: 1.0
+Version: 0.1
 Date: 2024-12-31
 Authors@R: c(
   person("Dyfan", "Jones", email="dyfan.r.jones@gmail.com", role= c("aut", "cre")),
