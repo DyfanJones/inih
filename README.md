@@ -7,6 +7,8 @@
 status](https://www.r-pkg.org/badges/version/inih)](https://CRAN.R-project.org/package=inih)
 [![Codecov test
 coverage](https://codecov.io/gh/DyfanJones/inih/graph/badge.svg)](https://app.codecov.io/gh/DyfanJones/inih)
+[![inih status
+badge](https://dyfanjones.r-universe.dev/inih/badges/version)](https://dyfanjones.r-universe.dev/inih)
 <!-- badges: end -->
 
 A simple wrapper of the [`inih`](https://github.com/benhoyt/inih) C
@@ -16,8 +18,16 @@ library for reading and writing INI files in R.
 
 You can install the development version of inih like so:
 
+Github:
+
 ``` r
 remotes::install_github("dyfanjones/inih")
+```
+
+r-universe:
+
+``` r
+install.packages("inih", repos = c("https://dyfanjones.r-universe.dev", "https://cloud.r-project.org"))
 ```
 
 ## Example
@@ -91,8 +101,8 @@ demo_ini <- system.file("demo.ini", package = "inih")
 #> # A tibble: 2 × 6
 #>   expression                 min median `itr/sec` mem_alloc `gc/sec`
 #>   <bch:expr>               <dbl>  <dbl>     <dbl>     <dbl>    <dbl>
-#> 1 inih::read_ini(demo_ini)  1      1         5.11       NaN      NaN
-#> 2 ini::read.ini(demo_ini)   5.10   5.18      1          Inf      Inf
+#> 1 inih::read_ini(demo_ini)  1      1         5.14       NaN      NaN
+#> 2 ini::read.ini(demo_ini)   5.09   5.17      1          Inf      Inf
 
 ggplot2::autoplot(bm)
 #> Loading required namespace: tidyr

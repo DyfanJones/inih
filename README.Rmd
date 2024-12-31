@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/inih)](https://CRAN.R-project.org/package=inih)
 [![Codecov test coverage](https://codecov.io/gh/DyfanJones/inih/graph/badge.svg)](https://app.codecov.io/gh/DyfanJones/inih)
+[![inih status badge](https://dyfanjones.r-universe.dev/inih/badges/version)](https://dyfanjones.r-universe.dev/inih)
 <!-- badges: end -->
 
 A simple wrapper of the [`inih`](https://github.com/benhoyt/inih) C library for reading and writing INI files in R.
@@ -24,8 +25,14 @@ A simple wrapper of the [`inih`](https://github.com/benhoyt/inih) C library for 
 
 You can install the development version of inih like so:
 
+Github:
 ``` r
 remotes::install_github("dyfanjones/inih")
+```
+
+r-universe:
+```r
+install.packages("inih", repos = c("https://dyfanjones.r-universe.dev", "https://cloud.r-project.org"))
 ```
 
 ## Example
