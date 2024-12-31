@@ -1,12 +1,12 @@
 Package: inih
 Type: Package
-Title: Fast Ini File Parser for R
+Title: Fast INI File Parser for R
 Version: 0.1
 Date: 2024-12-31
 Authors@R: c(
   person("Dyfan", "Jones", email="dyfan.r.jones@gmail.com", role= c("aut", "cre")),
   person("Ben", "Hoyt", role = c("aut", "cph"), comment="Author of bundled inih"))
-Description: Provide a simple 'ini' file parser to structured list format.
+Description: Provide a simple 'INI' file parser to structured list format.
   Using the 'C' library 'inih' <https://github.com/benhoyt/inih> as
   backend of fast performance.
 License: MIT + file LICENSE
