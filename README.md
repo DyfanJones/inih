@@ -3,6 +3,10 @@
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/inih)](https://CRAN.R-project.org/package=inih)
+[![Codecov test
+coverage](https://codecov.io/gh/DyfanJones/inih/graph/badge.svg)](https://app.codecov.io/gh/DyfanJones/inih)
 <!-- badges: end -->
 
 A simple wrapper of the [`inih`](https://github.com/benhoyt/inih) C
@@ -87,8 +91,8 @@ demo_ini <- system.file("demo.ini", package = "inih")
 #> # A tibble: 2 × 6
 #>   expression                 min median `itr/sec` mem_alloc `gc/sec`
 #>   <bch:expr>               <dbl>  <dbl>     <dbl>     <dbl>    <dbl>
-#> 1 inih::read_ini(demo_ini)  1      1         5.07       NaN      NaN
-#> 2 ini::read.ini(demo_ini)   5.10   5.13      1          Inf      Inf
+#> 1 inih::read_ini(demo_ini)  1      1         5.11       NaN      NaN
+#> 2 ini::read.ini(demo_ini)   5.10   5.18      1          Inf      Inf
 
 ggplot2::autoplot(bm)
 #> Loading required namespace: tidyr
